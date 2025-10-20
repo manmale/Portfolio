@@ -1,0 +1,31 @@
+{
+  "name": "premium-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manmale/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manmale/Portfolio/issues"
+  },
+  "homepage": "https://github.com/manmale/Portfolio#readme",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "vite": "^7.1.11"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
+  }
+}

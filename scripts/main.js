@@ -1,4 +1,7 @@
-/* Premium Portfolio – animations and helpers */
+/* Premium Portfolio – animations and helpers (ESM) */
+import gsapCore from 'gsap';
+import ScrollTriggerPlugin from 'gsap/ScrollTrigger';
+
 (function () {
   const setYear = () => {
     const yearEl = document.getElementById('year');
@@ -18,9 +21,8 @@
   };
 
   const animateIntro = () => {
-    if (!window.gsap) return;
-    const { gsap } = window;
-    if (window.ScrollTrigger) gsap.registerPlugin(window.ScrollTrigger);
+    const gsap = gsapCore;
+    gsap.registerPlugin(ScrollTriggerPlugin);
 
     const timeline = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
@@ -50,22 +52,20 @@
     }
 
     // Fade in sections on scroll
-    if (window.ScrollTrigger) {
-      const animatedSections = gsap.utils.toArray('.section');
-      animatedSections.forEach((section) => {
-        gsap.from(section, {
-          opacity: 0,
-          y: 24,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse',
-          },
-        });
+    const animatedSections = gsap.utils.toArray('.section');
+    animatedSections.forEach((section) => {
+      gsap.from(section, {
+        opacity: 0,
+        y: 24,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
       });
-    }
+    });
   };
 
   const manageVideoPerformance = () => {
