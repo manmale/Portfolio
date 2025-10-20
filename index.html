@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Premium portfolio – elegant design, smooth animations, professional video background." />
+    <meta name="theme-color" content="#0b0f14" />
+
+    <title>Your Name — Premium Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- GSAP for smooth animations -->
+    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="scripts/main.js"></script>
+
+    <link rel="icon" href="assets/icons/favicon.svg" />
+  </head>
+  <body class="theme-dark">
+    <!-- Decorative subtle noise overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#home" class="brand" aria-label="Go to home">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-text">Your Name</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#work" class="nav-link">Work</a>
+          <a href="#contact" class="nav-link cta-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="main">
+      <!-- Hero with full-screen video background -->
+      <section class="hero" aria-label="Hero">
+        <div class="video-bg" aria-hidden="true">
+          <video id="bg-video" class="bg-video" autoplay loop muted playsinline poster="assets/images/hero-poster.jpg">
+            <source src="assets/video/hero.mp4" type="video/mp4" />
+            <!-- Fallback text -->
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay gradient"></div>
+          <div class="video-overlay vignette"></div>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="eyebrow" data-animate="fade-up">Premium • Elegant • Trustworthy</div>
+          <h1 class="hero-title" data-animate="fade-up" data-animate-delay="0.05">
+            I craft
+            <span class="text-gradient">exceptional digital products</span>
+            that perform and inspire.
+          </h1>
+          <p class="hero-subtitle" data-animate="fade-up" data-animate-delay="0.1">
+            Bespoke websites, apps, and software — engineered with precision, secured by design,
+            and delivered with integrity. If you can imagine it, I can build it.
+          </p>
+          <div class="hero-cta" data-animate="fade-up" data-animate-delay="0.15">
+            <a href="#contact" class="btn btn-primary">Work with me</a>
+            <a href="#work" class="btn btn-ghost">View portfolio</a>
+          </div>
+          <div class="trust-badges" data-animate="fade-up" data-animate-delay="0.2" aria-label="Trust badges">
+            <span class="badge">Reliability-first</span>
+            <span class="badge">Security-led</span>
+            <span class="badge">Pixel-perfect</span>
+          </div>
+        </div>
+
+        <button class="scroll-indicator" aria-label="Scroll to About" onclick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'})">
+          <span class="chevron">⌄</span>
+        </button>
+      </section>
+
+      <!-- About preview (full section to be completed next) -->
+      <section id="about" class="about section">
+        <div class="container about-inner">
+          <div class="avatar">
+            <div class="avatar-ring"></div>
+            <img src="assets/images/profile.jpg" alt="Your Name portrait" />
+          </div>
+          <div class="about-text">
+            <h2 class="section-title">About</h2>
+            <p>
+              I design and build premium digital experiences: high-performance websites, robust web apps,
+              and crafted software systems. My approach blends strategy, design, and engineering to deliver
+              outcomes that are elegant, reliable, and trustworthy.
+            </p>
+            <p class="muted">
+              I value clarity, communication, and craftsmanship — the details that turn good
+              into exceptional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Placeholder sections to outline structure -->
+      <section id="services" class="section section-muted" aria-label="Services">
+        <div class="container">
+          <h2 class="section-title">Capabilities</h2>
+          <p class="muted">Custom development • UI/UX • AI & Automation • Cloud Architecture • Design Systems</p>
+        </div>
+      </section>
+
+      <section id="work" class="section" aria-label="Selected Work">
+        <div class="container">
+          <h2 class="section-title">Selected Work</h2>
+          <p class="muted">Showcase grid coming next.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-muted" aria-label="Contact">
+        <div class="container">
+          <h2 class="section-title">Let's build something exceptional</h2>
+          <p class="muted">Email • LinkedIn • GitHub (links to be added)</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="muted">© <span id="year"></span> Your Name</span>
+        <span class="muted">Crafted with care</span>
+      </div>
+    </footer>
+  </body>
+</html>
